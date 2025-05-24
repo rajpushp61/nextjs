@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import axios from "axios"
 import toast from "react-hot-toast"
+import Dashboard from "@/components/dashboard"
 
 
 export default function SignUpPage(){
@@ -44,6 +45,7 @@ export default function SignUpPage(){
     
     return <div className="flex flex-col items-center
     justify-center min-h-screen py-2">
+        <Dashboard/>
         <h1>{ loader ? "Processing": "Sign-up"}</h1>
         <hr />
         <label htmlFor="username">username</label>

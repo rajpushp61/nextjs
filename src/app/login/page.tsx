@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import axios from "axios"
 import toast from "react-hot-toast"
+import Dashboard from "@/components/dashboard"
 
 
 
@@ -46,11 +47,12 @@ export default function LoginPage(){
             setButtonDisabled(true)
         }
     },[user])
+
     return <div className="flex flex-col items-center
     justify-center min-h-screen py-2">
-        <h1>{loading? "Processing": "Login"}</h1>
+        <Dashboard/>
+        <h1>{loading? "Processing": "Zidio"}</h1>
         <hr />
-        
         <label htmlFor="email">email</label>
         <input className="p-2 border border-gray-300 rounded-lg
         mb-4 focus:outline:none focus:border-gray-600 text-black"
